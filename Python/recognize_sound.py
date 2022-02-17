@@ -37,12 +37,12 @@ with my_mic as source:
     with serial.Serial('/dev/ttyUSB0', 9600, timeout=500) as ser:
         if "spoon" in recognized_str_lower:
             os.system('espeak "I am picking up spoon" --stdout | paplay')
-            ser.write(bytes('SPOON\n','utf-8'))
+            ser.write(bytes('S\n','utf-8'))
         elif "fork" in recognized_str_lower:
             os.system('espeak "I am picking up fork" --stdout | paplay')
-            ser.write(bytes('FORK\n','utf-8'))
+            ser.write(bytes('F\n','utf-8'))
         elif "knife" in recognized_str_lower:
             os.system('espeak "I am picking up knife" --stdout | paplay')
-            ser.write(bytes('KNIFE\n','utf-8'))
-        time.sleep(10)
+            ser.write(bytes('K\n','utf-8'))
+        time.sleep(15)
         os.system('espeak "Please take it..." --stdout | paplay')
