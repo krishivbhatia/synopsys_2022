@@ -46,11 +46,14 @@ void loop() {
     if (buffer[0] == 'F') {
       mecaChainSVL.setServoPosition(0, 220);
     }
+    else if (buffer[0] == 'P') {
+      mecaChainSVL.setServoPosition(0, 200);
+    }
     else if (buffer[0] == 'S') {
       mecaChainSVL.setServoPosition(0, 180);
     }
     else if (buffer[0] == 'K') {
-      mecaChainSVL.setServoPosition(0, 140);
+      mecaChainSVL.setServoPosition(0, 160);
     }
     mecaChainSVL.communicate();
     delay(2000);

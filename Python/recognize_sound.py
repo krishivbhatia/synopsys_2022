@@ -28,10 +28,13 @@ with my_mic as source:
         recognized_str = r.recognize_google(audio) #to print voice into text
         recognized_str_lower = recognized_str.lower()
         print(recognized_str_lower) #to print voice into text
-        if "fork" in recognized_str_lower or "spoon" in recognized_str_lower or "knife" in recognized_str_lower:
+        if "fork" in recognized_str_lower \
+                or "spoon" in recognized_str_lower \
+                or "knife" in recognized_str_lower \
+                or "safety pin" in recognized_str_lower:
             understood = True
         else:
-            os.system('espeak "I did not get the keywords: Spoon or Knife or Fork..." --stdout | paplay')
+            os.system('espeak "I did not get the keywords: Spoon or Knife or Fork or Safety Pin" --stdout | paplay')
     # os.system('espeak "' + recognized_str_lower + '" --stdout | paplay')
 
     with serial.Serial('/dev/ttyUSB0', 9600, timeout=500) as ser:
@@ -44,5 +47,8 @@ with my_mic as source:
         elif "knife" in recognized_str_lower:
             os.system('espeak "I am picking up knife" --stdout | paplay')
             ser.write(bytes('K\n','utf-8'))
+        elif "safety" in recognized_str_lower and "pin" in recognized_str_lower:
+            os.system('espeak "I am picking up safety pin" --stdout | paplay')
+            ser.write(bytes('P\n','utf-8'))
         time.sleep(15)
         os.system('espeak "Please take it..." --stdout | paplay')
