@@ -6,3 +6,4 @@
 <p>It was found that Google Cloud Speech-to-Text API has good performance parsing English commands. Also, Uxcell’s 5V 50N electromagnet had better pick-and-place performance compared to Keyestudio’s 5V DC 25N electromagnet due to its higher electromagnetic induction strength. Further, the objects did not get dropped when the robot arm moved when Uxcell’s 5V 50N electromagnet was used.</p>
 <img width="752" alt="image" src="https://user-images.githubusercontent.com/97870868/155863610-5d4e4e98-c58f-4202-86b5-05a5064eaf65.png">
 <img width="746" alt="image" src="https://user-images.githubusercontent.com/97870868/155863632-41b6e3c2-1b0f-4513-a84d-a3244723564f.png">
+<img width="738" alt="image" src="https://user-images.githubusercontent.com/97870868/155864191-06a21b37-3b89-4ed3-8d43-699910359c07.png">
